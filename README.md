@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./method_fasa_v3.jpg" width="40%" height="100%">
+    <img src="./method_fasa_v3.jpg" width="100%" height="50%">
 </p>
 
 <div align="center">
