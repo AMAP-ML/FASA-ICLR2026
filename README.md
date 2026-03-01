@@ -34,6 +34,7 @@
   <br>
   <sup>3</sup>University of Illinois Urbana-Champaign
   <sup>4</sup>Texas A&M University
+  <br>
   <sup>†</sup>Project leads and corresponding authors.
 
 </div></font>
