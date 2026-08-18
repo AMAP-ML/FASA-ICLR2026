@@ -6,7 +6,7 @@
 
 [![Paper](https://img.shields.io/badge/📄_Paper-HuggingFace-yellow)](https://huggingface.co/papers/2602.03152)
 [![arXiv](https://img.shields.io/badge/arXiv-2602.03152-b31b1b.svg)](https://arxiv.org/abs/2602.03152)
-[![GitHub](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/your-username/FASA)
+[![GitHub](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/wangyifei0047/FASA-ICLR2026)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
