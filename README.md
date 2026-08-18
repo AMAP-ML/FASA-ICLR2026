@@ -10,6 +10,14 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
+**Yifei Wang**<sup>1</sup>, **Yueqi Wang**<sup>2</sup>, **Zhenrui Yue**<sup>3</sup>, **Huimin Zeng**<sup>3</sup>,
+**Yong Wang**<sup>1†</sup>, **Ismini Lourentzou**<sup>3</sup>, **Zhengzhong Tu**<sup>4</sup>, **Xiangxiang Chu**<sup>1</sup>, **Julian McAuley**<sup>2</sup>
+
+<sup>1</sup>AMAP, Alibaba Group &nbsp; <sup>2</sup>UC San Diego &nbsp; <sup>3</sup>UIUC &nbsp; <sup>4</sup>Texas A&M University
+<br><sup>†</sup>Project leads and corresponding authors
+
+*Accepted to ICLR 2026* 🎉
+
 </div>
 
 > **TL;DR** — Long-context LLMs are bottlenecked by the KV-cache memory footprint. FASA discovers that
@@ -19,7 +27,7 @@
 > 256 tokens** on LongBench and a **2.56× speedup using 18.9% of the cache** on AIME24.
 
 <div align="center">
-  <img src="assets/framework.svg" width="100%" alt="FASA framework"/>
+  <img src="method_fasa_v3.jpg" width="100%" alt="FASA framework"/>
 </div>
 
 ---
@@ -171,13 +179,14 @@ LongBench / c4 / pg19 / wikitext download automatically; reasoning inputs ship u
 ## 📚 Citation
 
 ```bibtex
-@article{wang2026fasa,
-  title   = {FASA: Frequency-aware Sparse Attention},
-  author  = {Wang, Yifei and Wang, Yueqi and Yue, Zhenrui and Zeng, Huimin and
-             Wang, Yong and Lourentzou, Ismini and Tu, Zhengzhong and
-             Chu, Xiangxiang and McAuley, Julian},
-  journal = {arXiv preprint arXiv:2602.03152},
-  year    = {2026}
+@inproceedings{wang2026fasa,
+  title     = {{FASA}: {Frequency-Aware} Sparse Attention},
+  author    = {Yifei Wang and Yueqi Wang and Zhenrui Yue and Huimin Zeng and
+               Yong Wang and Ismini Lourentzou and Zhengzhong Tu and
+               Xiangxiang Chu and Julian McAuley},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=FnSgecCEwg}
 }
 ```
 
