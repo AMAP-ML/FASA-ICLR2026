@@ -1,0 +1,105 @@
+<svg width="960" height="420" viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="gPhase1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="gPhase2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">FASA: Frequency-aware Sparse Attention</text>
+
+  <!-- ===================== Phase 1 ===================== -->
+  <rect x="24" y="56" width="440" height="316" rx="14" fill="url(#gPhase1)" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="44" y="82" font-size="14" font-weight="700" fill="#1d4ed8">Phase 1 · Offline profiling</text>
+  <text x="44" y="100" font-size="11.5" fill="#475569">Find the dominant frequency chunks (FCs)</text>
+
+  <!-- RoPE Q/K -->
+  <rect x="48" y="120" width="150" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft)"/>
+  <text x="123" y="150" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">RoPE Q / K</text>
+  <text x="123" y="170" text-anchor="middle" font-size="10.5" fill="#64748b">per head, per 2-D</text>
+  <text x="123" y="183" text-anchor="middle" font-size="10.5" fill="#64748b">frequency chunk</text>
+
+  <!-- Agreement -->
+  <rect x="48" y="230" width="150" height="96" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft)"/>
+  <text x="123" y="258" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">FC–head</text>
+  <text x="123" y="275" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">agreement</text>
+  <text x="123" y="298" text-anchor="middle" font-size="10.5" fill="#64748b">rank overlap vs.</text>
+  <text x="123" y="311" text-anchor="middle" font-size="10.5" fill="#64748b">full attention</text>
+
+  <!-- FC grid: dominant highlighted -->
+  <text x="330" y="140" text-anchor="middle" font-size="11.5" fill="#475569">dominant FCs (red)</text>
+  <g transform="translate(258,150)">
+    <!-- 4x4 grid of FC cells -->
+    <g stroke="#ffffff" stroke-width="2">
+      <rect x="0"  y="0"  width="34" height="34" fill="#cbd5e1"/>
+      <rect x="36" y="0"  width="34" height="34" fill="#ef4444"/>
+      <rect x="72" y="0"  width="34" height="34" fill="#cbd5e1"/>
+      <rect x="108" y="0" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="0"  y="36" width="34" height="34" fill="#ef4444"/>
+      <rect x="36" y="36" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="72" y="36" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="108" y="36" width="34" height="34" fill="#ef4444"/>
+      <rect x="0"  y="72" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="36" y="72" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="72" y="72" width="34" height="34" fill="#ef4444"/>
+      <rect x="108" y="72" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="0"  y="108" width="34" height="34" fill="#ef4444"/>
+      <rect x="36" y="108" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="72" y="108" width="34" height="34" fill="#cbd5e1"/>
+      <rect x="108" y="108" width="34" height="34" fill="#cbd5e1"/>
+    </g>
+  </g>
+  <text x="330" y="318" text-anchor="middle" font-size="10.5" fill="#64748b">saved to dimension_rankings/</text>
+
+  <!-- arrows within phase 1 -->
+  <line x1="123" y1="190" x2="123" y2="228" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="198" y1="278" x2="256" y2="230" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- ===================== Phase 2 ===================== -->
+  <rect x="496" y="56" width="440" height="316" rx="14" fill="url(#gPhase2)" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="516" y="82" font-size="14" font-weight="700" fill="#b91c1c">Phase 2 · Online inference</text>
+  <text x="516" y="100" font-size="11.5" fill="#475569">Query-aware token eviction with dominant FCs</text>
+
+  <!-- Query -->
+  <rect x="520" y="120" width="120" height="60" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft)"/>
+  <text x="580" y="146" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">New query</text>
+  <text x="580" y="164" text-anchor="middle" font-size="10.5" fill="#64748b">+ full KV cache</text>
+
+  <!-- Score tokens -->
+  <rect x="520" y="205" width="120" height="66" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft)"/>
+  <text x="580" y="232" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">Score tokens</text>
+  <text x="580" y="250" text-anchor="middle" font-size="10.5" fill="#64748b">using dominant</text>
+  <text x="580" y="263" text-anchor="middle" font-size="10.5" fill="#64748b">FCs only (cheap)</text>
+
+  <!-- Top-budget select -->
+  <rect x="520" y="296" width="120" height="60" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#soft)"/>
+  <text x="580" y="322" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f172a">Keep top-budget</text>
+  <text x="580" y="340" text-anchor="middle" font-size="10.5" fill="#64748b">salient tokens</text>
+
+  <!-- Focused attention -->
+  <rect x="700" y="180" width="210" height="120" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="url(#soft)"/>
+  <text x="805" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">Focused attention</text>
+  <text x="805" y="246" text-anchor="middle" font-size="11" fill="#475569">on pruned KV subset</text>
+  <text x="805" y="272" text-anchor="middle" font-size="11" fill="#475569">≈ full-KV accuracy,</text>
+  <text x="805" y="288" text-anchor="middle" font-size="11" fill="#475569">up to 2.56× faster</text>
+
+  <!-- arrows within phase 2 -->
+  <line x1="580" y1="180" x2="580" y2="203" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="580" y1="271" x2="580" y2="294" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="640" y1="238" x2="698" y2="240" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- cross-phase arrow: dominant FCs feed scoring -->
+  <path d="M400 226 C 452 226, 452 238, 516 238" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="462" y="214" text-anchor="middle" font-size="10.5" font-weight="600" fill="#b91c1c">dominant FCs</text>
+</svg>
