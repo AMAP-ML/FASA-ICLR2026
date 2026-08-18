@@ -1,0 +1,39 @@
+{
+    "streamingllm":{
+        "128":{"start_size":8,"recent_size":120,"max_capacity_prompts":128},
+        "256":{"start_size":8,"recent_size":248,"max_capacity_prompts":256},
+        "512":{"start_size":8,"recent_size":504,"max_capacity_prompts":512},
+        "1024":{"start_size":8,"recent_size":1016,"max_capacity_prompts":1024},
+        "2048":{"start_size":8,"recent_size":2040,"max_capacity_prompts":2048},
+        "4096":{"start_size":8,"recent_size":4088,"max_capacity_prompts":4096},
+        "8192":{"start_size":8,"recent_size":8184,"max_capacity_prompts":8192},
+
+        "4800":{"start_size":8,"recent_size":4792,"max_capacity_prompts":4800},
+        "4000":{"start_size":8,"recent_size":3992,"max_capacity_prompts":4000},
+        "3200":{"start_size":8,"recent_size":3192,"max_capacity_prompts":3200},
+        "2400":{"start_size":8,"recent_size":2392,"max_capacity_prompts":2400},
+        "1600":{"start_size":8,"recent_size":1592,"max_capacity_prompts":1600},
+        "800":{"start_size":8,"recent_size":792,"max_capacity_prompts":800},
+        "2000":{"start_size":8,"recent_size":1992,"max_capacity_prompts":2000},
+        "400":{"start_size":8,"recent_size":392,"max_capacity_prompts":400},
+        "1200":{"start_size":8,"recent_size":1192,"max_capacity_prompts":1200}
+},
+    "snapkv":{
+        "128":{"window_sizes":32,"max_capacity_prompts":128,"kernel_sizes":7,"pooling": "maxpool"},
+        "256":{"window_sizes":32,"max_capacity_prompts":256,"kernel_sizes":7,"pooling": "maxpool"},
+        "512":{"window_sizes":32,"max_capacity_prompts":512,"kernel_sizes":7,"pooling": "maxpool"},
+        "1024":{"window_sizes":32,"max_capacity_prompts":1024,"kernel_sizes":7,"pooling": "maxpool"},
+        "2048":{"window_sizes":32,"max_capacity_prompts":2048,"kernel_sizes":7,"pooling": "maxpool"},
+        "4096":{"window_sizes":32,"max_capacity_prompts":4096,"kernel_sizes":7,"pooling": "maxpool"},
+        "8192":{"window_sizes":32,"max_capacity_prompts":8192,"kernel_sizes":7,"pooling": "maxpool"},
+        "0.1":{"window_sizes":32,"max_capacity_prompts":0.1,"kernel_sizes":7,"pooling": "maxpool"},
+
+        "4800":{"window_sizes":32,"max_capacity_prompts":4800,"kernel_sizes":7,"pooling": "maxpool"},
+        "4000":{"window_sizes":32,"max_capacity_prompts":4000,"kernel_sizes":7,"pooling": "maxpool"},
+        "3200":{"window_sizes":32,"max_capacity_prompts":3200,"kernel_sizes":7,"pooling": "maxpool"},
+        "2400":{"window_sizes":32,"max_capacity_prompts":2400,"kernel_sizes":7,"pooling": "maxpool"},
+        "1600":{"window_sizes":32,"max_capacity_prompts":1600,"kernel_sizes":7,"pooling": "maxpool"},
+        "800":{"window_sizes":32,"max_capacity_prompts":800,"kernel_sizes":7,"pooling": "maxpool"}
+
+    }
+}

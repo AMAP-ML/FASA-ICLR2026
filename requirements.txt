@@ -1,0 +1,35 @@
+# Core deep learning stack
+# Pinned to the versions used in the paper's experiments (see jobs_r1/start.py).
+torch==2.5.1
+transformers==4.43
+accelerate>=0.26.0
+datasets==3.6.0
+# flash-attn is required for the FlashAttention-2 monkey patches. Install the
+# wheel that matches your CUDA / torch / python build, e.g.:
+#   flash_attn-2.7.4.post1+cu12torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+flash-attn>=2.7.4
+
+# Numerics / data
+numpy
+pandas
+
+# LongBench metrics
+fuzzywuzzy
+rouge
+jieba
+
+# Reasoning (math CoT) evaluation
+sympy
+mpmath
+antlr4-python3-runtime
+latex2sympy2
+word2number
+pebble
+timeout_decorator
+multiprocess
+evaluate
+
+# Utilities
+tqdm
+dill
+python-dateutil
