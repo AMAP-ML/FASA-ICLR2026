@@ -140,7 +140,7 @@ bash reasoning/eval.sh   # grade generations
 ```
 </details>
 
-Ready-to-run single-GPU wrappers: `bash.sh`, `perplexity/evaluate_ppl.sh`, `reasoning/run_math.sh`, `efficiency/bench_texgen.sh`.
+Ready-to-run single-GPU wrappers: `bash.sh`, `perplexity/evaluate_ppl.sh`, `reasoning/run_math.sh`.
 
 ## ⚙️ Key arguments
 
@@ -161,7 +161,6 @@ identify_important_fre.py     # Phase 1: dominant-FC profiler
 monkey_patch/frequency/       # FASA (dynamic_frequency)
 monkey_patch/{oracle,h2o,quest,snapkv,streamingllm}/   # baselines
 longbench/ · perplexity/ · reasoning/    # the three benchmarks
-efficiency/                   # latency / memory benchmarks
 ```
 
 ## 🔧 Installation notes
